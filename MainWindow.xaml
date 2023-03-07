@@ -1,0 +1,98 @@
+﻿<Window x:Class="Car_Generator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Car_Generator"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        WindowStartupLocation="CenterScreen"
+        Height="450" Width="800">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0"  >
+                <ScrollViewer>
+                    <StackPanel Name="CarsGroupbox">
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+
+
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <RadioButton x:Name="Singlerdbtn"
+                                 Content="Single"
+                                 FontSize="25"
+                                 FontWeight="Bold">
+                    </RadioButton>
+
+                    <RadioButton x:Name="Multi"
+                                 Grid.Column="1"
+                                 Content="Multi"
+                                 FontSize="25"
+                                 FontWeight="Bold">
+                    </RadioButton>
+                </Grid>
+
+
+                <Grid Grid.Column="1">
+                    <TextBlock 
+                    Name="timeSpan"
+                    Grid.Column="1" 
+                    HorizontalAlignment="Center" 
+                    Foreground="Black" 
+                    FontSize="35" 
+                    FontWeight="Bold"
+                    Text=" 00:00:00"/>
+                </Grid>
+
+
+                <Grid Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0"
+                            Name="StartBtn"
+                            Content="Start"
+                            FontSize="35"
+                            FontWeight="DemiBold"
+                            Background="LightGreen" Click="StartBtn_Click"> 
+                        
+                    </Button>
+
+                    <Button Grid.Column="1"
+                            Name="CancelBtn"
+                            Content="Cancel"
+                            FontSize="35"
+                            FontWeight="DemiBold"
+                            Background="IndianRed">
+
+                    </Button>
+
+                </Grid>
+                
+                
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Window>
