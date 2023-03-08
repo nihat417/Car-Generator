@@ -84,7 +84,7 @@
                             Content="Cancel"
                             FontSize="35"
                             FontWeight="DemiBold"
-                            Background="IndianRed">
+                            Background="IndianRed" Click="CancelBtn_Click">
 
                     </Button>
 

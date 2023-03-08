@@ -7,7 +7,17 @@
              mc:Ignorable="d" 
              d:DesignHeight="250" d:DesignWidth="800" Loaded="UserControl_Loaded">
     <Grid>
-        <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3"/>
+            <RowDefinition/>
+            <RowDefinition Height="3"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Background="DarkBlue"/>
+        <Label Grid.Row="2" Background="DarkBlue"/>
+
+
+        <Grid Grid.Row="1" Background="DarkCyan">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="300"/>
                 <ColumnDefinition/>
@@ -34,14 +44,16 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock Text="Make"
+                    <TextBlock Text="Make:"
                                FontSize="25"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center"/>
 
                     <TextBlock Grid.Column="1" 
                                x:Name="Maketxt"
-                               Text="Make text"/>
+                               Text="Make text" FontSize="25"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"/>
 
                 </Grid>
 
@@ -50,13 +62,15 @@
                         <ColumnDefinition Width="120"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Text="Model" FontSize="25"
+                    <TextBlock Text="Model:" FontSize="25"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center"/>
 
                     <TextBlock Grid.Column="1" 
                                x:Name="Modeltxt"
-                               Text="Make text"/>
+                               Text="Make text" FontSize="25"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"/>
                 </Grid>
 
                 <Grid Grid.Row="2">
@@ -64,12 +78,14 @@
                         <ColumnDefinition Width="120"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Text="Year" FontSize="25"
+                    <TextBlock Text="Year:" FontSize="25"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center"/>
                     <TextBlock Grid.Column="1" 
                                x:Name="Yeartxt"
-                               Text="Make text"/>
+                               Text="Make text" FontSize="25"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"/>
                 </Grid>
 
             </Grid>
